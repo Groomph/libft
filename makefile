@@ -60,7 +60,7 @@ $(NAME):	${OBJS}
 			${CC} ${CFLAGS} -c ${SRCS}
 			ar rc ${NAME} ${OBJS} libft.h
 
-all:		${NAME} bonus
+all:		${NAME}
 
 clean:
 		${RM} ${OBJS} ${BOBJS}
@@ -70,11 +70,8 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:		${BOBJS}
-			${CC} ${CFLAGS} -c ${BSRCS}
-			ar rc ${NAME} ${BOBJS} libft.h
-
-so:	
-		gcc -shared -o libft.so -fpic *.c libft.h
+bonus:		${BOBJS} ${OBJS}
+			${CC} ${CFLAGS} -c ${SRCS} ${BSRCS}
+			ar rc ${NAME} ${OBJS} ${BOBJS} libft.h
 
 .PHONY:		all clean fclean re
