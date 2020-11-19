@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 04:58:55 by romain            #+#    #+#             */
-/*   Updated: 2020/11/19 12:18:47 by rsanchez         ###   ########.fr       */
+/*   Updated: 2020/11/19 12:47:35 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s2++;
 		n--;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (n ? (unsigned char)*s1 - (unsigned char)*s2 : 0);
 }
