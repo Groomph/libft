@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 00:55:45 by romain            #+#    #+#             */
-/*   Updated: 2020/11/05 02:48:27 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:18:38 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*tmpsrc1;
 	unsigned char	*tmpsrc2;
 

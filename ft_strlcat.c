@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 05:12:15 by romain            #+#    #+#             */
-/*   Updated: 2020/11/08 05:51:04 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:21:09 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		dest++;
 	if (i == dstsize)
 	{
-		while (src[++j]){}
-			return (i + j);
+		while (src[++j])
+		{
+		}
+		return (i + j);
 	}
 	while (src[++j])
 	{
 		if (j + i < dstsize - 1)
 			*dest++ = src[j];
-		}
+	}
 	*dest = '\0';
 	return (i + j);
 }

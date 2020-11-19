@@ -6,7 +6,7 @@
 /*   By: rsanchez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 17:04:19 by rsanchez          #+#    #+#             */
-/*   Updated: 2020/11/08 05:36:28 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:13:45 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-/*	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90))
-		return (1);
-	if (c >= 122 && c <= 97)
-		return (1);
-*/	return (ft_isdigit(c) || ft_isalpha(c));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

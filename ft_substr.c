@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 11:32:31 by romain            #+#    #+#             */
-/*   Updated: 2020/11/08 06:17:29 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:41:28 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*tmp;
-	size_t		i;
+	char			*tmp;
+	size_t			i;
 	unsigned int	size;
 
 	if (!s)

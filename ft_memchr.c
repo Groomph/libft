@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 00:55:45 by romain            #+#    #+#             */
-/*   Updated: 2020/11/08 05:17:50 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:17:56 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *src, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*tmpsrc;
 
 	i = -1;

@@ -6,14 +6,14 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 23:50:45 by romain            #+#    #+#             */
-/*   Updated: 2020/11/09 05:32:06 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:16:21 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{	
+{
 	t_list	*first;
 	void	*temp;
 

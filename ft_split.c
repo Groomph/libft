@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 06:13:52 by romain            #+#    #+#             */
-/*   Updated: 2020/11/07 09:26:38 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:20:24 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ static char	*filltab(char **tmp, char *s, char c)
 
 char		**ft_split(char const *s, char c)
 {
-	int	i;
-	int	count;
-	int	check;
+	int		i;
+	int		count;
+	int		check;
 	char	**tmp;
 
 	i = -1;
@@ -57,5 +57,5 @@ char		**ft_split(char const *s, char c)
 	while (++i < count)
 		s = filltab(&tmp[i], (char*)s, c);
 	tmp[count] = NULL;
-	return (tmp);		
+	return (tmp);
 }

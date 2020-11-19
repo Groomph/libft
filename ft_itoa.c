@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:27:28 by romain            #+#    #+#             */
-/*   Updated: 2020/11/08 06:55:12 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:47:32 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_itoa(int n)
 {
-	int		taille;
+	int				taille;
 	unsigned int	tmp;
-	char		*str;
+	char			*str;
 
 	taille = n < 0 ? 2 : 1;
 	tmp = n < 0 ? -n : n;
@@ -34,7 +34,6 @@ char	*ft_itoa(int n)
 	{
 		str[taille--] = (tmp % 10) + '0';
 		tmp /= 10;
-	}	
+	}
 	return (str);
 }
-

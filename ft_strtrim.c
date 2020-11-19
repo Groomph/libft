@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 14:13:41 by romain            #+#    #+#             */
-/*   Updated: 2020/11/07 05:55:06 by romain           ###   ########.fr       */
+/*   Updated: 2020/11/16 15:41:12 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ static int	isset(char const c, char const *set)
 char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*tmp;
-	int	i;
-	int	i2;
+	int		i;
+	int		i2;
 
 	i = 0;
 	i2 = 0;
 	if (!s1)
 		return (NULL);
 	while (isset(*s1, set))
-		s1++;	
+		s1++;
 	while (s1[i])
 	{
 		if (isset(s1[i++], set))
