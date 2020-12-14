@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 07:46:00 by romain            #+#    #+#             */
-/*   Updated: 2020/11/09 05:02:00 by romain           ###   ########.fr       */
+/*   Updated: 2020/12/14 17:44:15 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int	ft_atoi(const char *nptr)
 	while (*nptr >= '0' && *nptr <= '9')
 	{
 		nb *= 10;
-		nb += (*nptr - '0');
+		nb += ((*nptr - '0') * neg);
 		nptr++;
 	}
-	return (nb * neg);
+	return (nb);
 }

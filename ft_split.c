@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 06:13:52 by romain            #+#    #+#             */
-/*   Updated: 2020/12/14 17:05:10 by romain           ###   ########.fr       */
+/*   Updated: 2020/12/14 17:42:33 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	cleaner(char **tmp, int i)
 {
-	while (--i > 0)
+	while (--i >= 0)
 		free(tmp[i]);
 	free(tmp);
 	return (1);
@@ -31,7 +31,7 @@ static const char	*filltab(char **tmp, const char *s, char c)
 	while (s[i] && s[i] != c)
 		i++;
 	if (!(*tmp = malloc(sizeof(char) * (i + 1))))
-		return (s);
+		return (NULL);
 	i2 = -1;
 	while (++i2 < i)
 		(*tmp)[i2] = s[i2];
