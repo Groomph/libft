@@ -6,7 +6,7 @@
 #    By: romain <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/14 18:08:38 by romain            #+#    #+#              #
-#    Updated: 2020/12/14 18:28:11 by romain           ###   ########.fr        #
+#    Updated: 2020/12/14 19:12:51 by romain           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,22 @@ CC	= clang
 CFLAGS	= -Wall -Wextra -Werror
 
 RM	= rm -f
+
+YELLOW	= \e[93m
+
+RED	= \e[31m
+
+MAGENTA	= \e[35m
+
+BLUE	= \e[34m
+
+CYAN	= \e[36m
+
+GREEN	= \e[92m
+
+info_script = "The Hacking Project is a Peer-Learning training based in FRANCE"
+			
+i ?= 0
 
 SRCS	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	  ft_isascii.c ft_isdigit.c ft_isprint.c ft_memmove.c ft_memccpy.c \
@@ -39,11 +55,32 @@ $(NAME):	${OBJS}
 all:		${NAME}
 
 clean:
-		${RM} ${OBJS} ${BOBJS}
+		@${RM} ${OBJS} ${BOBJS}
+		@printf '  🧼 $(YELLOW)Cleaning 🧼\n'
+		@printf '  🧼 $(RED)Cleaning 🧼\n'
+		@printf '  🧼 $(MAGENTA)Cleaning 🧼\n'
+		@printf '  🧼 $(BLUE)Cleaning 🧼\n'
+		@printf '  🧼 $(CYAN)Cleaning 🧼\n'
+		@printf '  🧼 $(GREEN)Cleaning 🧼\n'
 
 fclean:		clean
-		@${RM} ${NAME}
-		@printf '"\u1F9FD" Coucou bande de nouille\n'
+		@${RM} ${NAME}; \
+			i=${i}; \
+		while [ $${i} -lt $${#info_script} ]; do \
+			sleep 0.0000000000000001; \
+			echo -ne "${YELLOW}$${info_script:$$i:1}" | tr -d "%"; \
+			i=`expr $$i + 1`; \
+		done; \
+		true
+
+		
+		
+		@printf '🧽 $(YELLOW)HardCleaning 🧽\n'
+		@printf '🧽 $(RED)HardCleaning 🧽\n'
+		@printf '🧽 $(MAGENTA)HardCleaning 🧽\n'
+		@printf '🧽 $(BLUE)HardCleaning 🧽\n'
+		@printf '🧽 $(CYAN)HardCleaning 🧽\n'
+		@printf '🧽 $(GREEN)HardCleaning 🧽\n'
 
 re:			fclean all
 
