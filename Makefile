@@ -57,7 +57,6 @@ CFLAGS	= -Wall -Wextra -Werror
 RM	= rm -f
 
 $(NAME):	${OBJS}
-			${CC} ${CFLAGS} -c ${SRCS}
 			ar rc ${NAME} ${OBJS} libft.h
 
 all:		${NAME}
@@ -74,4 +73,4 @@ bonus:		${BOBJS} ${OBJS}
 			${CC} ${CFLAGS} -c ${SRCS} ${BSRCS}
 			ar rc ${NAME} ${OBJS} ${BOBJS} libft.h
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
