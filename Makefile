@@ -50,7 +50,7 @@ BOBJS	= ${BSRCS:.c=.o}
 
 NAME	= libft.a
 
-CC	= gcc
+CC	= clang
 
 CFLAGS	= -Wall -Wextra -Werror
 
@@ -70,7 +70,6 @@ fclean:		clean
 re:			fclean all
 
 bonus:		${BOBJS} ${OBJS}
-			${CC} ${CFLAGS} -c ${SRCS} ${BSRCS}
 			ar rc ${NAME} ${OBJS} ${BOBJS} libft.h
 
 .PHONY:		all clean fclean re bonus
