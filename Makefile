@@ -6,13 +6,13 @@
 #    By: romain <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/14 18:08:38 by romain            #+#    #+#              #
-#    Updated: 2020/12/14 19:12:51 by romain           ###   ########.fr        #
+#    Updated: 2020/12/14 20:01:31 by romain           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 
-CC	= clang
+CC	= @clang
 
 CFLAGS	= -Wall -Wextra -Werror
 
@@ -30,9 +30,7 @@ CYAN	= \e[36m
 
 GREEN	= \e[92m
 
-info_script = "The Hacking Project is a Peer-Learning training based in FRANCE"
-			
-i ?= 0
+WHITE	= \e[97m
 
 SRCS	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	  ft_isascii.c ft_isdigit.c ft_isprint.c ft_memmove.c ft_memccpy.c \
@@ -50,41 +48,42 @@ BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c \
 BOBJS	= ${BSRCS:.c=.o}
 
 $(NAME):	${OBJS}
-			ar rcs ${NAME} ${OBJS}
+			@ar rcs ${NAME} ${OBJS}
+		@printf '🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱🧱🧱\n'
+		@printf '🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱🧱\n'
+		@printf '🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱\n'
+		@printf '🧱🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱\n'
+		@printf '🧱🧱🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱\n'
 
 all:		${NAME}
 
 clean:
 		@${RM} ${OBJS} ${BOBJS}
-		@printf '  🧼 $(YELLOW)Cleaning 🧼\n'
-		@printf '  🧼 $(RED)Cleaning 🧼\n'
-		@printf '  🧼 $(MAGENTA)Cleaning 🧼\n'
-		@printf '  🧼 $(BLUE)Cleaning 🧼\n'
-		@printf '  🧼 $(CYAN)Cleaning 🧼\n'
-		@printf '  🧼 $(GREEN)Cleaning 🧼\n'
+		@printf '	🧼 $(YELLOW)Cleaning 🧼\n'
+		@printf '	🧼 $(RED)Cleaning 🧼\n'
+		@printf '	🧼 $(MAGENTA)Cleaning 🧼\n'
+		@printf '	🧼 $(BLUE)Cleaning 🧼\n'
+		@printf '	🧼 $(CYAN)Cleaning 🧼\n'
+		@printf '	🧼 $(GREEN)Cleaning 🧼\n'
 
-fclean:		clean
-		@${RM} ${NAME}; \
-			i=${i}; \
-		while [ $${i} -lt $${#info_script} ]; do \
-			sleep 0.0000000000000001; \
-			echo -ne "${YELLOW}$${info_script:$$i:1}" | tr -d "%"; \
-			i=`expr $$i + 1`; \
-		done; \
-		true
-
-		
-		
-		@printf '🧽 $(YELLOW)HardCleaning 🧽\n'
-		@printf '🧽 $(RED)HardCleaning 🧽\n'
-		@printf '🧽 $(MAGENTA)HardCleaning 🧽\n'
-		@printf '🧽 $(BLUE)HardCleaning 🧽\n'
-		@printf '🧽 $(CYAN)HardCleaning 🧽\n'
-		@printf '🧽 $(GREEN)HardCleaning 🧽\n'
+fclean:		
+		@${RM} ${OBJS} ${BOBJS}
+		@${RM} ${NAME}; 
+		@printf '	 🧽 $(YELLOW)Cleaning 🧽\n'
+		@printf '	 🧽 $(RED)Cleaning 🧽\n'
+		@printf '	 🧽 $(MAGENTA)Cleaning 🧽\n'
+		@printf '	 🧽 $(BLUE)Cleaning 🧽\n'
+		@printf ' 	 🧽 $(CYAN)Cleaning 🧽\n'
+		@printf ' 	 🧽 $(GREEN)Cleaning 🧽\n'
 
 re:			fclean all
 
 bonus:		${BOBJS} ${OBJS}
-			ar rcs ${NAME} ${OBJS} ${BOBJS}
+		@printf '🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱🧱🧱\n'
+		@printf '🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱🧱\n'
+		@printf '🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱🧱\n'
+		@printf '🧱🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱🧱\n'
+		@printf '🧱🧱🧱🧱🧱$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion$(WHITE)|$(RED)Com$(WHITE)p$(RED)ila$(WHITE)t$(RED)ion🧱\n'
+		@ar rcs ${NAME} ${OBJS} ${BOBJS}
 
 .PHONY:		all clean fclean re bonus
