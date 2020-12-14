@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 04:23:48 by romain            #+#    #+#             */
-/*   Updated: 2020/12/14 15:34:27 by romain           ###   ########.fr       */
+/*   Updated: 2020/12/14 16:34:37 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s || !c)
 	{
-		if (*s == (unsigned char)c)
+		if ((unsigned char)*s == (unsigned char)c)
 			return (char *)(s);
 		else
 			s++;

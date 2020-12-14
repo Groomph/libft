@@ -6,13 +6,21 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 06:13:52 by romain            #+#    #+#             */
-/*   Updated: 2020/11/16 15:20:24 by rsanchez         ###   ########.fr       */
+/*   Updated: 2020/12/14 17:05:10 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*filltab(char **tmp, char *s, char c)
+static int	cleaner(char **tmp, int i)
+{
+	while (--i > 0)
+		free(tmp[i]);
+	free(tmp);
+	return (1);
+}
+
+static const char	*filltab(char **tmp, const char *s, char c)
 {
 	int	i;
 	int	i2;
@@ -45,17 +53,15 @@ char		**ft_split(char const *s, char c)
 	{
 		if (s[i] == c)
 			check++;
-		else if (check)
-		{
-			count++;
+		else if (check && ++count)
 			check = 0;
-		}
 	}
 	if (!(tmp = malloc(sizeof(char*) * (count + 1))))
 		return (NULL);
 	i = -1;
 	while (++i < count)
-		s = filltab(&tmp[i], (char*)s, c);
+		if (!(s = filltab(&tmp[i], s, c)) && cleaner(tmp, i))
+			return (NULL);
 	tmp[count] = NULL;
 	return (tmp);
 }
