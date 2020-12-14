@@ -6,7 +6,7 @@
 /*   By: romain <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 23:50:45 by romain            #+#    #+#             */
-/*   Updated: 2020/12/14 15:55:02 by romain           ###   ########.fr       */
+/*   Updated: 2020/12/14 17:46:37 by rsanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 		if (!(new = ft_lstnew(temp)) && del)
 		{
-				ft_lstclear(&first, del);
-				del(temp);
+			ft_lstclear(&first, del);
+			del(temp);
 		}
 		if (!new)
 			return (NULL);
